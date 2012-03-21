@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D14F1D2215197EDE00D10A63 /* bonjour-discovery.m in Sources */ = {isa = PBXBuildFile; fileRef = D14F1D2115197EDE00D10A63 /* bonjour-discovery.m */; };
 		D18635FE15197ABD006B15B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18635FD15197ABD006B15B9 /* Foundation.framework */; };
 		D186360115197ABD006B15B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D186360015197ABD006B15B9 /* main.m */; };
 		D186360515197ABD006B15B9 /* Network_Discovery.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D186360415197ABD006B15B9 /* Network_Discovery.1 */; };
@@ -26,7 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D18635F915197ABD006B15B9 /* Network-Discovery */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Network-Discovery"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14F1D2015197EDE00D10A63 /* bonjour-discovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bonjour-discovery.h"; sourceTree = "<group>"; };
+		D14F1D2115197EDE00D10A63 /* bonjour-discovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "bonjour-discovery.m"; sourceTree = "<group>"; };
+		D18635F915197ABD006B15B9 /* networkDiscovery */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = networkDiscovery; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18635FD15197ABD006B15B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D186360015197ABD006B15B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D186360315197ABD006B15B9 /* Network-Discovery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Network-Discovery-Prefix.pch"; sourceTree = "<group>"; };
@@ -57,7 +60,7 @@
 		D18635FA15197ABD006B15B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D18635F915197ABD006B15B9 /* Network-Discovery */,
+				D18635F915197ABD006B15B9 /* networkDiscovery */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +78,8 @@
 			children = (
 				D186360015197ABD006B15B9 /* main.m */,
 				D186360415197ABD006B15B9 /* Network_Discovery.1 */,
+				D14F1D2015197EDE00D10A63 /* bonjour-discovery.h */,
+				D14F1D2115197EDE00D10A63 /* bonjour-discovery.m */,
 				D186360215197ABD006B15B9 /* Supporting Files */,
 			);
 			path = "Network-Discovery";
@@ -105,7 +110,7 @@
 			);
 			name = "Network-Discovery";
 			productName = "Network-Discovery";
-			productReference = D18635F915197ABD006B15B9 /* Network-Discovery */;
+			productReference = D18635F915197ABD006B15B9 /* networkDiscovery */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -139,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D186360115197ABD006B15B9 /* main.m in Sources */,
+				D14F1D2215197EDE00D10A63 /* bonjour-discovery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +203,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Network-Discovery/Network-Discovery-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = networkDiscovery;
 			};
 			name = Debug;
 		};
@@ -206,7 +212,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Network-Discovery/Network-Discovery-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = networkDiscovery;
 			};
 			name = Release;
 		};
@@ -229,6 +235,7 @@
 				D186360A15197ABD006B15B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

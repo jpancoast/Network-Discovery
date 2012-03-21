@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "bonjour-discovery.h"
+
 
 int main(int argc, const char * argv[])
 {
@@ -15,6 +17,10 @@ int main(int argc, const char * argv[])
         
         // insert code here...
         NSLog(@"Hello, World!");
+        
+        bonjour_discovery *temp = [ bonjour_discovery alloc ];
+        
+        [ temp testingBitches ];
         
     }
     return 0;
