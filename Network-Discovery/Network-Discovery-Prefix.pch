@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Network-Discovery' target in the 'Network-Discovery' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

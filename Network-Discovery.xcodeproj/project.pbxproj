@@ -1,0 +1,236 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D18635FE15197ABD006B15B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18635FD15197ABD006B15B9 /* Foundation.framework */; };
+		D186360115197ABD006B15B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D186360015197ABD006B15B9 /* main.m */; };
+		D186360515197ABD006B15B9 /* Network_Discovery.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D186360415197ABD006B15B9 /* Network_Discovery.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D18635F715197ABD006B15B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				D186360515197ABD006B15B9 /* Network_Discovery.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D18635F915197ABD006B15B9 /* Network-Discovery */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Network-Discovery"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D18635FD15197ABD006B15B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D186360015197ABD006B15B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D186360315197ABD006B15B9 /* Network-Discovery-Prefix.pch */ = {isa = PBXFileReference; path = "Network-Discovery-Prefix.pch"; sourceTree = "<group>"; };
+		D186360415197ABD006B15B9 /* Network_Discovery.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Network_Discovery.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D18635F615197ABD006B15B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D18635FE15197ABD006B15B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D18635EE15197ABD006B15B9 = {
+			isa = PBXGroup;
+			children = (
+				D18635FF15197ABD006B15B9 /* Network-Discovery */,
+				D18635FC15197ABD006B15B9 /* Frameworks */,
+				D18635FA15197ABD006B15B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D18635FA15197ABD006B15B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D18635F915197ABD006B15B9 /* Network-Discovery */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D18635FC15197ABD006B15B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D18635FD15197ABD006B15B9 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D18635FF15197ABD006B15B9 /* Network-Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				D186360015197ABD006B15B9 /* main.m */,
+				D186360415197ABD006B15B9 /* Network_Discovery.1 */,
+				D186360215197ABD006B15B9 /* Supporting Files */,
+			);
+			path = "Network-Discovery";
+			sourceTree = "<group>";
+		};
+		D186360215197ABD006B15B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D186360315197ABD006B15B9 /* Network-Discovery-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D18635F815197ABD006B15B9 /* Network-Discovery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D186360815197ABD006B15B9 /* Build configuration list for PBXNativeTarget "Network-Discovery" */;
+			buildPhases = (
+				D18635F515197ABD006B15B9 /* Sources */,
+				D18635F615197ABD006B15B9 /* Frameworks */,
+				D18635F715197ABD006B15B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Network-Discovery";
+			productName = "Network-Discovery";
+			productReference = D18635F915197ABD006B15B9 /* Network-Discovery */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D18635F015197ABD006B15B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = D18635F315197ABD006B15B9 /* Build configuration list for PBXProject "Network-Discovery" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D18635EE15197ABD006B15B9;
+			productRefGroup = D18635FA15197ABD006B15B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D18635F815197ABD006B15B9 /* Network-Discovery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D18635F515197ABD006B15B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D186360115197ABD006B15B9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D186360615197ABD006B15B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D186360715197ABD006B15B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D186360915197ABD006B15B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Network-Discovery/Network-Discovery-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D186360A15197ABD006B15B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Network-Discovery/Network-Discovery-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D18635F315197ABD006B15B9 /* Build configuration list for PBXProject "Network-Discovery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D186360615197ABD006B15B9 /* Debug */,
+				D186360715197ABD006B15B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D186360815197ABD006B15B9 /* Build configuration list for PBXNativeTarget "Network-Discovery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D186360915197ABD006B15B9 /* Debug */,
+				D186360A15197ABD006B15B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D18635F015197ABD006B15B9 /* Project object */;
+}
