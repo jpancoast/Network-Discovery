@@ -29,7 +29,7 @@
 		D18635F915197ABD006B15B9 /* Network-Discovery */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Network-Discovery"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18635FD15197ABD006B15B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D186360015197ABD006B15B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D186360315197ABD006B15B9 /* Network-Discovery-Prefix.pch */ = {isa = PBXFileReference; path = "Network-Discovery-Prefix.pch"; sourceTree = "<group>"; };
+		D186360315197ABD006B15B9 /* Network-Discovery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Network-Discovery-Prefix.pch"; sourceTree = "<group>"; };
 		D186360415197ABD006B15B9 /* Network_Discovery.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Network_Discovery.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
