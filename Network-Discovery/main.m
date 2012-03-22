@@ -21,6 +21,7 @@ int main(int argc, const char * argv[])
         bonjour_discovery *temp = [ [ bonjour_discovery alloc ] init ];
         
         [ temp testingBitches ];
+        [ temp browseServices ];
         
     }
     return 0;
