@@ -30,11 +30,13 @@
 
 
 //---resolve the IP address of a service---
+/*
 -(void) resolveIPAddress:(NSNetService *)service {    
     NSNetService *remoteService = service;
     remoteService.delegate = self;
     [remoteService resolveWithTimeout:0];
 }
+*/
 
 
 //---browse for services---
