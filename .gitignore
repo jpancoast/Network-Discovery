@@ -1,4 +1,5 @@
 TODO
 Network-Discovery.xcodeproj/project.xcworkspace/xcuserdata/
-Network-Discovery.xcodeproj/xcuserdata/jpancoast.xcuserdatad/xcschemes/Network-Discovery.xcscheme
+Network-Discovery.xcodeproj/xcuserdata/*.xcuserdatad/*
+*jpancoast.xcuserdatad*
 *.swp
