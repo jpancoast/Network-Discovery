@@ -8,18 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface bonjour_discovery : NSObject < NSNetServiceBrowserDelegate, NSNetServiceDelegate >
-{
-    NSNetServiceBrowser *browser;
-}
-
-
-@property (readwrite, strong ) NSNetServiceBrowser *browser;
-@property (readwrite, strong ) NSMutableArray *services;
-
-@property( nonatomic, strong ) NSString *listOfDevices;
-
-
+@interface bonjour_discovery : NSObject
 
 -( void ) testingBitches;
 
