@@ -18,7 +18,7 @@ int main(int argc, const char * argv[])
         // insert code here...
         NSLog(@"Hello, World!");
         
-        bonjour_discovery *temp = [ [ bonjour_discovery alloc ] init ];
+        bonjour_discovery *temp = [ bonjour_discovery alloc ];
         
         [ temp testingBitches ];
         [ temp browseServices ];
