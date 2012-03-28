@@ -7,8 +7,14 @@
 //
 
 #import "bonjour-discovery.h"
+#import <arpa/inet.h>
 
 @implementation bonjour_discovery
+
+@synthesize browser;
+@synthesize services;
+@synthesize listOfDevices;
+
 
 -( void ) testingBitches
 {
@@ -40,9 +46,9 @@
 
 
 //---browse for services---
-/*
+
 -(void) browseServices {
-    DevelopmentLog( @"Bonjour: browseServices" );
+    NSLog( @"Bonjour: browseServices" );
     services = [NSMutableArray new];
     self.browser = [[NSNetServiceBrowser alloc ] init ];
     
@@ -53,10 +59,10 @@
 //     searchForServicesOfType: @"_services._dns-sd._udp." 
 //     inDomain:                @""
      
-    //    [self.browser searchForServicesOfType:@"_ssh._tcp." inDomain:@""];
-    [ self.browser searchForServicesOfType: @"_services._dns-sd._udp" inDomain: @"" ];  //This type is used to discover all services being advertised.  You then have to do the call again to see who's advertising it.
+    [self.browser searchForServicesOfType:@"_ssh._tcp." inDomain:@""];
+    //[ self.browser searchForServicesOfType: @"_services._dns-sd._udp" inDomain: @"" ];  //This type is used to discover all services being advertised.  You then have to do the call again to see who's advertising it.
 }
-*/
+
 
 //---services found---
 /*
@@ -64,13 +70,13 @@
  
  http://fernlightning.com/doku.php?id=randd:bonjour
  */
-/*
+
 -(void)netServiceBrowser:(NSNetServiceBrowser *)aBrowser
           didFindService:(NSNetService *)aService
               moreComing:(BOOL)more {
     [services addObject:aService];
     
-    DevelopmentLog( @"Bonjour: Found Service.  Resolving... Name: %@, type: %@, domain: %@", [ aService name ], [aService type ], [aService domain ] );
+    NSLog( @"Bonjour: Found Service.  Resolving... Name: %@, type: %@, domain: %@", [ aService name ], [aService type ], [aService domain ] );
     
     NSString *tempString = [ NSString stringWithFormat: @"Bonjour: Found Service.  Resolving... Name: %@, type: %@, domain: %@", [ aService name ], [aService type ], [aService domain ] ];
     
@@ -82,28 +88,30 @@
     else
         self.listOfDevices = [ NSString stringWithFormat: @"%@\n%@", self.listOfDevices, tempString ];
     
+    CFRunLoopStop(CFRunLoopGetCurrent());
+
     
-    DevelopmentLog( @"Blah: %@", self.listOfDevices );
+    NSLog( @"Blah22: %@", self.listOfDevices );
     
     //    [self resolveIPAddress:aService];//Commented out because the call is just getting the services being advertised, so there isn't an ip address.  If we search for a specific service, like _ssh., then we should be able to do this call.
 }
-*/
+
 
 
 //---services removed from the network---
-/*
+
 -(void)netServiceBrowser:(NSNetServiceBrowser *)aBrowser
         didRemoveService:(NSNetService *)aService
               moreComing:(BOOL)more {
     [services removeObject:aService];
     
-    DevelopmentLog( @"Bonjour: Removed: %@", [aService hostName] );
+    NSLog( @"Bonjour: Removed: %@", [aService hostName] );
 }
-*/
+
 
 
 //---managed to resolve---
-/*
+
 -(void)netServiceDidResolveAddress:(NSNetService *)service {
     NSString           *name = nil;
     NSData *address = nil;
@@ -114,6 +122,7 @@
     
     int port;
     
+    NSLog( @"BLAH netService" );
     
     for(int i=0;i < [[service addresses] count]; i++ )
     {
@@ -124,27 +133,29 @@
         ipString = [NSString stringWithFormat: @"%s", inet_ntoa(socketAddress->sin_addr)];
         
         port = socketAddress->sin_port;
-        
-        DevelopmentLog( @"Bonjour: Resolved: %@-->%@:%hu\n", [service hostName], ipString, port );
+  
+        NSLog( @"blah blah blha" );
+//        NSLog( @"Bonjour: Resolved: %@-->%@:%hu\n", [service hostName], ipString, port );
     }
     
+//    CFRunLoopStop(CFRunLoopGetCurrent());
 }
-*/
 
 
-/*
+
+
 - (void)netService:(NSNetService *)sender didUpdateTXTRecordData:(NSData *)data
 {
-    DevelopmentLog( @"Bonjour: we're getting back txt record data, wonder what it is?" );
+    NSLog( @"Bonjour: we're getting back txt record data, wonder what it is?" );
 }
-*/
+
 
 
 //---did not managed to resolve---
-/*
+
 -(void)netService:(NSNetService *)service didNotResolve:(NSDictionary *)errorDict {
-    DevelopmentLog( @"Bonjour: Could Not Resolve: %@", errorDict );
+    NSLog( @"Bonjour: Could Not Resolve: %@", errorDict );
 }
- */
+ 
 
 @end

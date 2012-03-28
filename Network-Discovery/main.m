@@ -18,10 +18,14 @@ int main(int argc, const char * argv[])
         // insert code here...
         NSLog(@"Hello, World!");
         
-        bonjour_discovery *temp = [ bonjour_discovery alloc ];
+        bonjour_discovery *temp = [ [ bonjour_discovery alloc ] init ];
         
-        [ temp testingBitches ];
+//        [ temp testingBitches ];
+        NSLog( @"blah 1" );
         [ temp browseServices ];
+        CFRunLoopRun();
+        NSLog( @"blah 2" );
+//        NSLog( @"Services, or something: %@", [ temp.services ] );
         
     }
     return 0;
