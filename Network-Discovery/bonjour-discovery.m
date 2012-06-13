@@ -36,13 +36,14 @@
 
 
 //---resolve the IP address of a service---
-/*
+
 -(void) resolveIPAddress:(NSNetService *)service {    
     NSNetService *remoteService = service;
     remoteService.delegate = self;
     [remoteService resolveWithTimeout:0];
 }
-*/
+
+
 
 
 //---browse for services---
@@ -88,12 +89,14 @@
     else
         self.listOfDevices = [ NSString stringWithFormat: @"%@\n%@", self.listOfDevices, tempString ];
     
-    CFRunLoopStop(CFRunLoopGetCurrent());
 
     
     NSLog( @"Blah22: %@", self.listOfDevices );
     
-    //    [self resolveIPAddress:aService];//Commented out because the call is just getting the services being advertised, so there isn't an ip address.  If we search for a specific service, like _ssh., then we should be able to do this call.
+    [self resolveIPAddress:aService];//Commented out because the call is just getting the services being advertised, so there isn't an ip address.  If we search for a specific service, like _ssh., then we should be able to do this call.
+    
+    
+//    CFRunLoopStop(CFRunLoopGetCurrent());
 }
 
 
@@ -127,7 +130,7 @@
     for(int i=0;i < [[service addresses] count]; i++ )
     {
         name = [service name];
-        address = [[service addresses] objectAtIndex: i];
+        address = [service addresses][i];
         socketAddress = (struct sockaddr_in *) [address
                                                 bytes];
         ipString = [NSString stringWithFormat: @"%s", inet_ntoa(socketAddress->sin_addr)];
@@ -135,10 +138,10 @@
         port = socketAddress->sin_port;
   
         NSLog( @"blah blah blha" );
-//        NSLog( @"Bonjour: Resolved: %@-->%@:%hu\n", [service hostName], ipString, port );
+        NSLog( @"Bonjour: Resolved: %@-->%@:%hu\n", [service hostName], ipString, port );
     }
     
-//    CFRunLoopStop(CFRunLoopGetCurrent());
+    CFRunLoopStop(CFRunLoopGetCurrent());
 }
 
 
