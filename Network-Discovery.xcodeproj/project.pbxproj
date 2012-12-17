@@ -11,6 +11,9 @@
 		D18635FE15197ABD006B15B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18635FD15197ABD006B15B9 /* Foundation.framework */; };
 		D186360115197ABD006B15B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D186360015197ABD006B15B9 /* main.m */; };
 		D186360515197ABD006B15B9 /* Network_Discovery.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D186360415197ABD006B15B9 /* Network_Discovery.1 */; };
+		D1EBBE72167FB49A000C7EF4 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EBBE6F167FB49A000C7EF4 /* GCDAsyncSocket.m */; };
+		D1EBBE73167FB49A000C7EF4 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EBBE71167FB49A000C7EF4 /* GCDAsyncUdpSocket.m */; };
+		D1EBBE76167FB533000C7EF4 /* SSDP_Discovery.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EBBE75167FB533000C7EF4 /* SSDP_Discovery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,12 @@
 		D186360015197ABD006B15B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D186360315197ABD006B15B9 /* Network-Discovery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Network-Discovery-Prefix.pch"; sourceTree = "<group>"; };
 		D186360415197ABD006B15B9 /* Network_Discovery.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Network_Discovery.1; sourceTree = "<group>"; };
+		D1EBBE6E167FB49A000C7EF4 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		D1EBBE6F167FB49A000C7EF4 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		D1EBBE70167FB49A000C7EF4 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		D1EBBE71167FB49A000C7EF4 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		D1EBBE74167FB533000C7EF4 /* SSDP_Discovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDP_Discovery.h; sourceTree = "<group>"; };
+		D1EBBE75167FB533000C7EF4 /* SSDP_Discovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDP_Discovery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 		D18635EE15197ABD006B15B9 = {
 			isa = PBXGroup;
 			children = (
+				D1EBBE6D167FB273000C7EF4 /* CocoaAsyncSocket */,
 				D18635FF15197ABD006B15B9 /* Network-Discovery */,
 				D18635FC15197ABD006B15B9 /* Frameworks */,
 				D18635FA15197ABD006B15B9 /* Products */,
@@ -81,6 +91,8 @@
 				D14F1D2015197EDE00D10A63 /* bonjour-discovery.h */,
 				D14F1D2115197EDE00D10A63 /* bonjour-discovery.m */,
 				D186360215197ABD006B15B9 /* Supporting Files */,
+				D1EBBE74167FB533000C7EF4 /* SSDP_Discovery.h */,
+				D1EBBE75167FB533000C7EF4 /* SSDP_Discovery.m */,
 			);
 			path = "Network-Discovery";
 			sourceTree = "<group>";
@@ -91,6 +103,17 @@
 				D186360315197ABD006B15B9 /* Network-Discovery-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1EBBE6D167FB273000C7EF4 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				D1EBBE6E167FB49A000C7EF4 /* GCDAsyncSocket.h */,
+				D1EBBE6F167FB49A000C7EF4 /* GCDAsyncSocket.m */,
+				D1EBBE70167FB49A000C7EF4 /* GCDAsyncUdpSocket.h */,
+				D1EBBE71167FB49A000C7EF4 /* GCDAsyncUdpSocket.m */,
+			);
+			name = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +142,7 @@
 		D18635F015197ABD006B15B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = D18635F315197ABD006B15B9 /* Build configuration list for PBXProject "Network-Discovery" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -145,6 +168,9 @@
 			files = (
 				D186360115197ABD006B15B9 /* main.m in Sources */,
 				D14F1D2215197EDE00D10A63 /* bonjour-discovery.m in Sources */,
+				D1EBBE72167FB49A000C7EF4 /* GCDAsyncSocket.m in Sources */,
+				D1EBBE73167FB49A000C7EF4 /* GCDAsyncUdpSocket.m in Sources */,
+				D1EBBE76167FB533000C7EF4 /* SSDP_Discovery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +183,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -184,6 +214,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
